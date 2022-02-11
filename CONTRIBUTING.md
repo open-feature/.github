@@ -12,3 +12,7 @@ Public communication channels will be established soon, stay tuned!
 ## Meetings
 
 Regular meetings will be established soon.
+
+## Project Governance
+
+Project governance is documented [here](https://github.com/openfeatureflags/governance)
