@@ -1,9 +1,10 @@
 # Contributing to OpenFeature
 
+[![Sign-up](https://img.shields.io/static/v1?label=Sign-up&message=for%20news&color=blue)](https://github.com/openfeatureflags/spec)
 [![Roadmap](https://img.shields.io/static/v1?label=Roadmap&message=public&color=green)](https://github.com/orgs/openfeatureflags/projects/1)
 [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/openfeatureflags/.github/blob/main/CODE_OF_CONDUCT.md)
 
-> :warning: This project is in the phase of the initial planning. Contact us if you want to learn more, and stay tuned for the news!
+> :warning: This project is in the phase of the initial planning. Contact us if you want to learn more, and [sign-up for news](https://bit.ly/openfeature-signup)!
 
 ## Communication Channels
 
@@ -15,4 +16,10 @@ Regular meetings will be established soon.
 
 ## Project Governance
 
-Project governance is documented [here](https://github.com/openfeatureflags/governance)
+Project governance is documented [here](https://github.com/openfeatureflags/governance).
+We plan to have open and vendor neutral governance in the project once it is fully established.
+
+## Share feedback
+
+For now, please share your feedback in the [sign-up form](https://bit.ly/openfeature-signup) that has optional fields for it.
+More channels will be added later.
