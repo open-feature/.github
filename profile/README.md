@@ -1,6 +1,6 @@
 ##  Welcome to the OpenFeature project 👋
 
-[![Sign-up](https://img.shields.io/static/v1?label=Sign-up&message=for%20news&color=blue)](https://github.com/open-feature/spec)
+[![Sign-up](https://img.shields.io/static/v1?label=Sign-up&message=for%20news&color=blue)](https://bit.ly/openfeature-signup)
 [![Specification](https://img.shields.io/static/v1?label=Specification&message=draft&color=yellow)](https://github.com/open-feature/spec)
 [![Roadmap](https://img.shields.io/static/v1?label=Roadmap&message=public&color=green)](https://github.com/orgs/open-feature/projects/1)
 [![Governance](https://img.shields.io/static/v1?label=Governance&message=bootstrap&color=yellow)](https://github.com/open-feature/community/blob/main/governance-charter.md)
