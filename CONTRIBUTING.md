@@ -12,7 +12,33 @@ We hold regular meetings which you can see [here](https://github.com/open-featur
 
 We are also present on the `#openfeature` channel in the [CNCF slack](https://slack.cncf.io/).
 
-## Project Governance
+## Project governance
 
-Project governance is documented [here](https://github.com/open-feature/governance).
-We plan to have open and vendor neutral governance in the project once it is fully established.
+Project governance is documented [here](https://github.com/open-feature/community/blob/main/governance-charter.md).
+
+## Repository requirements
+
+We recommend repositories in the project adhere to some security and maintenance guidelines. These are _only guidelines_, and may not be applicable or valuable in all instances. Adherence to these guidelines may be required for 1.0 artifact releases, at the discretion of the [Technical Steering Committee](https://github.com/open-feature/community/blob/main/governance-charter.md#technical-steering-committee-tsc) and maintainers.
+
+| Requirement                    | Recommended solution(s)                                                                                                                   |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| artifact and image signing     | language-specific tools, [cosign][cosign]                                                                                                 |
+| automated publishing           | github actions (with permissions applying principle of least privilege), language-specific tools (Maven, nuget, NPM, etc)                 |
+| container, base image scanning | [snyk][snyk], [trivy][trivy]                                                                                                              |
+| code ownership                 | branch protection rules and CODEOWNERS files                                                                                              |
+| dependency analysis            | [snyk][snyk]                                                                                                                              |
+| dependency auto-updates        | [Renovate][renovate]                                                                                                                      |
+| fuzzing                        | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  |
+| SBOM generation                | [CycloneDX][cyclonedx]                                                                                                                    |
+| static analysis                | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
+| unit, integration testing      | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
+
+[sonarcloud]: https://www.sonarsource.com/products/sonarcloud/
+[snyk]: https://snyk.io/
+[trivy]: https://github.com/aquasecurity/trivy
+[cosign]: https://github.com/sigstore/cosign-installer
+[cyclonedx]: https://cyclonedx.org/tool-center/
+[clusterfuzzlite]: https://google.github.io/clusterfuzzlite/
+[oss-fuzz]: https://github.com/google/oss-fuzz
+[cucumber]: https://cucumber.io/tools/cucumber-open/
+[renovate]: https://github.com/apps/renovate
