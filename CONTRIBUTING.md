@@ -29,7 +29,7 @@ We recommend repositories in the project adhere to some security and maintenance
 | dependency analysis            | [snyk][snyk]                                                                                                                              |
 | dependency auto-updates        | [Renovate][renovate]                                                                                                                      |
 | fuzzing                        | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  |
-| SBOM generation                | [CycloneDX][cyclonedx]                                                                                                                    |
+| SBOM generation                | [CycloneDX][cyclonedx], [SPDX][spdx], [syft][syft]                                                                                         |
 | static analysis                | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
 | unit, integration testing      | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
 
@@ -42,3 +42,5 @@ We recommend repositories in the project adhere to some security and maintenance
 [oss-fuzz]: https://github.com/google/oss-fuzz
 [cucumber]: https://cucumber.io/tools/cucumber-open/
 [renovate]: https://github.com/apps/renovate
+[syft]: https://github.com/anchore/syft
+[spdx]: https://spdx.dev/resources/tools/
