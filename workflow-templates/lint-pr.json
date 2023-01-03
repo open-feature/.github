@@ -1,0 +1,5 @@
+{
+  "name": "Pull Request Lint Workflow",
+  "description": "Ensures that a pull request title follows the Convention Commits spec. The GitHub repository must be configured to use the squash & merge strategy and with the option 'Default to PR title for squash merge commits' enabled.",
+  "iconName": "lint-pr"
+}
