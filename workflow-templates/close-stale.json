@@ -1,0 +1,5 @@
+{
+  "name": "Close Stale Issues and PRs",
+  "description": "Automatically label and close stale issues once a week.",
+  "iconName": "close-stale"
+}
