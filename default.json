@@ -10,7 +10,6 @@
   "dependencyDashboard": true,
   "prCreation": "not-pending",
   "rebaseWhen": "behind-base-branch",
-  "platformAutomerge": true,
   "npm": {
     "packageRules": [
       {
