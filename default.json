@@ -2,7 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default preset for use with OpenFeature's repos",
   "extends": [
-    "config:base"
+    "config:base",
+    ":semanticCommitTypeAll(chore)"
   ],
   "semanticCommits": "enabled",
   "automergeType": "branch",
