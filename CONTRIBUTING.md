@@ -20,23 +20,26 @@ Project governance is documented [here](https://github.com/open-feature/communit
 
 We recommend repositories in the project adhere to some security and maintenance guidelines. These are _only guidelines_, and may not be applicable or valuable in all instances. They are primarily inspired by recommendations from the [Cloud Native Security Controls Catalog](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/). Adherence to these guidelines may be required for 1.0 artifact releases, at the discretion of the [Technical Steering Committee](https://github.com/open-feature/community/blob/main/governance-charter.md#technical-steering-committee-tsc) and maintainers.
 
-| Requirement                    | Recommended solution(s)                                                                                                                   |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| artifact and image signing     | language-specific tools, [cosign][cosign]                                                                                                 |
-| automated publishing           | github actions (with permissions applying principle of least privilege), language-specific tools (Maven, nuget, NPM, etc)                 |
-| container, base image scanning | [snyk][snyk], [trivy][trivy]                                                                                                              |
-| code ownership                 | branch protection rules\* and CODEOWNERS files                                                                                            |
-| dependency analysis            | [snyk][snyk]                                                                                                                              |
-| dependency auto-updates        | [Renovate][renovate]\*\*, [Dependabot][dependabot]                                                                                        |
-| fuzzing                        | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  |
-| SBOM generation                | [CycloneDX][cyclonedx], [SPDX][spdx], [syft][syft]                                                                                        |
-| static analysis                | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
-| unit, integration testing      | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
+| Requirement                     | Recommended solution(s)                                                                                                                   |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| artifact and image signing      | language-specific tools, [cosign][cosign]                                                                                                 |
+| automated publishing            | github actions (with permissions applying principle of least privilege), language-specific tools (Maven, nuget, NPM, etc)                 |
+| container, base image scanning  | [snyk][snyk], [trivy][trivy]                                                                                                              |
+| code ownership                  | branch protection rules\* and CODEOWNERS files                                                                                            |
+| dependency analysis             | [snyk][snyk]                                                                                                                              |
+| dependency auto-updates         | [Renovate][renovate]\*\*, [Dependabot][dependabot]                                                                                        |
+| fuzzing                         | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  |
+| SBOM generation                 | [CycloneDX][cyclonedx], [SPDX][spdx], [syft][syft]                                                                                        |
+| static analysis                 | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
+| unit, integration testing       | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
+| semantic versioning, changelogs | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          |
 
 \* Branch protection rules should protect the primary branch (usually `main`) by requiring code review from the appropriate parties (other than the author), usually expressed in a CODEOWNERS file.
 
 \*\* We recommend Renovate over Dependabot because of it's group and auto-merge features.
 Additionally, we have an org-wide base config for Renovate.
+
+\*\*\* Release Please isn't strictly necessary, but combined with [Conventional Commits][conventional-commits], it provides a simple yet robust means generating useful, accurate changelogs and releasing semantically versioned artifacts.
 
 [sonarcloud]: https://www.sonarsource.com/products/sonarcloud/
 [snyk]: https://snyk.io/
@@ -50,3 +53,6 @@ Additionally, we have an org-wide base config for Renovate.
 [syft]: https://github.com/anchore/syft
 [spdx]: https://spdx.dev/resources/tools/
 [dependabot]: https://github.com/dependabot
+[conventional-commits]: [https://www.conventionalcommits.org/]
+[semantic-versioning]: [https://semver.org/]
+[release-please]: [https://github.com/googleapis/release-please]
