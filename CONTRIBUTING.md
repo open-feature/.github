@@ -39,7 +39,7 @@ We recommend repositories in the project adhere to some security and maintenance
 \*\* We recommend Renovate over Dependabot because of it's group and auto-merge features.
 Additionally, we have an org-wide base config for Renovate.
 
-\*\*\* Release Please isn't strictly necessary, but combined with [Conventional Commits][conventional-commits], it provides a simple yet robust means generating useful, accurate changelogs and releasing semantically versioned artifacts.
+\*\*\* Release Please isn't strictly necessary, but combined with [Conventional Commits][conventional-commits], it provides a simple yet robust means of generating useful, accurate changelogs and releasing semantically versioned artifacts.
 
 [sonarcloud]: https://www.sonarsource.com/products/sonarcloud/
 [snyk]: https://snyk.io/
