@@ -33,6 +33,7 @@ We recommend repositories in the project adhere to some security and maintenance
 | static analysis                 | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
 | unit, integration testing       | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
 | semantic versioning, changelogs | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          |
+| helpful readme file             | See [example README](./templates/READMEs/README.md).md                                                                                    |
 
 \* Branch protection rules should protect the primary branch (usually `main`) by requiring code review from the appropriate parties (other than the author), usually expressed in a CODEOWNERS file.
 
@@ -53,6 +54,7 @@ Additionally, we have an org-wide base config for Renovate.
 [syft]: https://github.com/anchore/syft
 [spdx]: https://spdx.dev/resources/tools/
 [dependabot]: https://github.com/dependabot
+
 [conventional-commits]: [https://www.conventionalcommits.org/]
 [semantic-versioning]: [https://semver.org/]
 [release-please]: [https://github.com/googleapis/release-please]
