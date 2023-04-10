@@ -98,7 +98,7 @@ Interested in contributing? Great, we'd love your help! To get started, take a l
 
 <!-- TODO: update with correct repo -->
 <a href="https://github.com/open-feature/your-repo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-feature/your-repo" />
+  <img src="https://contrib.rocks/image?repo=open-feature/your-repo" alt="Pictures of the folks who have contributed to the project" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
