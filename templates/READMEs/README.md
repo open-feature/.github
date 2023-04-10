@@ -1,4 +1,4 @@
-<!-- TODO: This is an template SDK README.md. It might also be useful for other repository types. Update the TODOs with correct examples/documentation. Replace all instances of "your-repo" with the appropriate name -->
+<!-- TODO: This is a template SDK README.md. It might also be useful for other repository types. Update the TODOs with correct examples/documentation. Replace all instances of "your-repo" with the appropriate name -->
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
