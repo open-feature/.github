@@ -33,7 +33,7 @@ We recommend repositories in the project adhere to some security and maintenance
 | static analysis                 | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
 | unit, integration testing       | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
 | semantic versioning, changelogs | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          |
-| helpful readme file             | See [example README](./templates/READMEs/README.md).md                                                                                    |
+| helpful readme file             | See [example README.md](./templates/READMEs/README.md)                                                                                    |
 
 \* Branch protection rules should protect the primary branch (usually `main`) by requiring code review from the appropriate parties (other than the author), usually expressed in a CODEOWNERS file.
 
