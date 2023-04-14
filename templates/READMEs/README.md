@@ -40,10 +40,10 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 ## 🌟 Features:
 
-- support for various backend [providers](https://docs.openfeature.dev/docs/reference/concepts/provider)
-- easy integration and extension via [hooks](https://docs.openfeature.dev/docs/reference/concepts/hooks)
+- support for various backend [providers](https://openfeature.dev/docs/reference/concepts/provider)
+- easy integration and extension via [hooks](https://openfeature.dev/docs/reference/concepts/hooks)
 - bool, string, numeric and object flag types
-- [context-aware](https://docs.openfeature.dev/docs/reference/concepts/evaluation-context) evaluation
+- [context-aware](https://openfeature.dev/docs/reference/concepts/evaluation-context) evaluation
 
 ## 🚀 Usage:
 
@@ -54,7 +54,7 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 ### Context-aware evaluation:
 
 Sometimes the value of a flag must take into account some dynamic criteria about the application or user, such as the user location, IP, email address, or the location of the server.
-In OpenFeature, we refer to this as [`targeting`](https://docs.openfeature.dev/specification/glossary#targeting).
+In OpenFeature, we refer to this as [`targeting`](https://openfeature.dev/specification/glossary#targeting).
 If the flag system you're using supports targeting, you can provide the input data using the `EvaluationContext`.
 
 <!-- TODO: code examples using context and different levels -->
@@ -66,7 +66,7 @@ To develop a provider, you need to create a new project and include the OpenFeat
 <!-- TODO: code example implementing a provider -->
 
 <!-- TODO: update with the technology in question -->
-See [here](https://docs.openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available providers.
+See [here](https://openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available providers.
 
 ### Hooks:
 
@@ -75,7 +75,7 @@ Hooks are a mechanism that allow for the addition of arbitrary behavior at well-
 <!-- TODO: code example of a hook -->
 
 <!-- TODO: update with the technology in question -->
-See [here](https://docs.openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available hooks.
+See [here](https://openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available hooks.
 
 ### Logging:
 
@@ -88,7 +88,7 @@ See [here](https://docs.openfeature.dev/docs/reference/technologies/server/javas
   - Twitter: [@openfeature](https://twitter.com/openfeature)
   - LinkedIn: [OpenFeature](https://www.linkedin.com/company/openfeature/)
 - Join us on [Slack](https://cloud-native.slack.com/archives/C0344AANLA1)
-- For more check out our [community page](https://docs.openfeature.dev/community/)
+- For more check out our [community page](https://openfeature.dev/community/)
 
 ## 🤝 Contributing
 
