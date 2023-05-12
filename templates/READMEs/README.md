@@ -49,7 +49,7 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 ### Basics:
 
-<!-- TODO: code examples featuring setting a provider, getting a client, and doing an evaluation -->
+<!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
 
 ### Context-aware evaluation:
 
