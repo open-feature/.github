@@ -51,6 +51,10 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 <!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
 
+You can also bind a provider to a specific client by name, instead of setting that provider globally:
+
+<!-- TODO: example of named client binding -->
+
 ### Context-aware evaluation:
 
 Sometimes the value of a flag must take into account some dynamic criteria about the application or user, such as the user location, IP, email address, or the location of the server.
