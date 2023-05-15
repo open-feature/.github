@@ -13,7 +13,7 @@
 <h2 align="center">OpenFeature your-repo</h2>
 
 <!-- TODO: add relevant badges -->
-[![Specification](https://img.shields.io/static/v1?label=Specification&message=v0.5.2&color=yellow)](https://github.com/open-feature/spec/tree/v0.5.2)
+[![Specification](https://img.shields.io/static/v1?label=Specification&message=v0.6.0&color=yellow)](https://github.com/open-feature/spec/tree/v0.6.0)
 
 
 ## 👋 Hey there! Thanks for checking out the OpenFeature your-repo
@@ -49,7 +49,11 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 ### Basics:
 
-<!-- TODO: code examples featuring setting a provider, getting a client, and doing an evaluation -->
+<!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
+
+You can also bind a provider to a specific client by name, instead of setting that provider globally:
+
+<!-- TODO: example of named client binding -->
 
 ### Context-aware evaluation:
 
@@ -58,6 +62,12 @@ In OpenFeature, we refer to this as [`targeting`](https://openfeature.dev/specif
 If the flag system you're using supports targeting, you can provide the input data using the `EvaluationContext`.
 
 <!-- TODO: code examples using context and different levels -->
+
+### Events
+
+Events allow you to react to state changes in the provider or underlying flag management system, such as flag definition changes, provider readiness, or error conditions.
+
+<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event -->
 
 ### Providers:
 
