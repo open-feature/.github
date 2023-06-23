@@ -15,7 +15,6 @@
 <!-- TODO: add relevant badges -->
 [![Specification](https://img.shields.io/static/v1?label=Specification&message=v0.6.0&color=yellow)](https://github.com/open-feature/spec/tree/v0.6.0)
 
-
 ## 👋 Hey there! Thanks for checking out the OpenFeature your-repo
 
 ### What is OpenFeature?
@@ -42,7 +41,7 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 - support for various backend [providers](https://openfeature.dev/docs/reference/concepts/provider)
 - easy integration and extension via [hooks](https://openfeature.dev/docs/reference/concepts/hooks)
-- bool, string, numeric and object flag types
+- bool, string, numeric, and object flag types
 - [context-aware](https://openfeature.dev/docs/reference/concepts/evaluation-context) evaluation
 
 ## 🚀 Usage:
@@ -51,7 +50,7 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 <!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
 
-You can also bind a provider to a specific client by name, instead of setting that provider globally:
+You can also bind a provider to a specific client by name instead of setting that provider globally:
 
 <!-- TODO: example of named client binding -->
 
@@ -76,16 +75,16 @@ To develop a provider, you need to create a new project and include the OpenFeat
 <!-- TODO: code example implementing a provider -->
 
 <!-- TODO: update with the technology in question -->
-See [here](https://openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available providers.
+See [here](https://openfeature.dev/ecosystem) for a catalog of available providers.
 
 ### Hooks:
 
-Hooks are a mechanism that allow for the addition of arbitrary behavior at well-defined points of the flag evaluation life-cycle. Use cases include validation of the resolved flag value, modifying or adding data to the evaluation context, logging, telemetry, and tracking.
+A hook is a mechanism that allows for adding arbitrary behavior at well-defined points of the flag evaluation life-cycle. Use cases include validating the resolved flag value, modifying or adding data to the evaluation context, logging, telemetry, and tracking.
 
 <!-- TODO: code example of a hook -->
 
 <!-- TODO: update with the technology in question -->
-See [here](https://openfeature.dev/docs/reference/technologies/server/javascript) for a catalog of available hooks.
+See [here](https://openfeature.dev/ecosystem) for a catalog of available hooks.
 
 ### Logging:
 
