@@ -94,7 +94,7 @@ See [here](https://openfeature.dev/docs/reference/technologies/server/javascript
 ## ⭐️ Support the project
 
 - Give this repo a ⭐️!
-- Follow us social media:
+- Follow us on social media:
   - Twitter: [@openfeature](https://twitter.com/openfeature)
   - LinkedIn: [OpenFeature](https://www.linkedin.com/company/openfeature/)
 - Join us on [Slack](https://cloud-native.slack.com/archives/C0344AANLA1)
