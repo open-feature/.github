@@ -70,6 +70,6 @@ In addition to the normal [repository requirements](#repository-requirements) (m
 - review and resolve pull requests pertaining to their component, including automated pull requests from dependabot, etc
 - release new versions of their component
   - it's not required to implement new features in new releases, but releases containing dependency updates and bug fixes are expected
-- alert the [Governance Board or Technical Committee](https://github.com/open-feature/community/blob/main/community-members.md#technical-committee) if they're no longer interested or able fulfill the preceding requirements
+- alert the [Governance Board or Technical Committee](https://github.com/open-feature/community/blob/main/community-members.md#technical-committee) if they're no longer interested or able to fulfill the preceding requirements
 
 Consistent and prolonged failure to satisfy the above requirements may result in archival and deprecation of the component in question.
