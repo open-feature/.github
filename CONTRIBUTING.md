@@ -35,6 +35,32 @@ We recommend repositories in the project adhere to some security and maintenance
 | semantic versioning, changelogs | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          |
 | helpful readme file             | See [example README.md](./templates/READMEs/README.md)                                                                                    |
 
+## Developer Certificate Of Origin
+
+The [Developer Certificate of Origin (DCO)](https://developercertificate.org/) is a lightweight way for contributors
+to certify that they wrote or otherwise have the right to submit the code they are contributing to the project.
+
+Contributors to the OpenFeature project sign-off that they adhere to these requirements by adding a `Signed-off-by` line to commit messages.
+
+```console
+This is my commit message
+
+Signed-off-by: John Doe <JohnDoe@somewhere.org>
+```
+
+Git even has a `-s` command line option to append this automatically to your commit message:
+
+```console
+git commit -s -m 'This is my commit message'
+```
+
+If you have already made a commit and forgot to include the sign-off, you can amend your last commit
+to add the sign-off with the following command, which can then be force pushed.
+
+```console
+git commit --amend -s
+```
+
 \* Branch protection rules should protect the primary branch (usually `main`) by requiring code review from the appropriate parties (other than the author), usually expressed in a CODEOWNERS file.
 
 \*\* We recommend Renovate over Dependabot because of it's group and auto-merge features.
