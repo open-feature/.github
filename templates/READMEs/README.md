@@ -65,8 +65,11 @@ If the flag system you're using supports targeting, you can provide the input da
 ### Events
 
 Events allow you to react to state changes in the provider or underlying flag management system, such as flag definition changes, provider readiness, or error conditions.
+Initialization events (`PROVIDER_READY` on success, `PROVIDER_ERROR` on failure) are dispatched for every provider.
+Some providers support additional events, such as `PROVIDER_CONFIGURATION_CHANGED`.
+Please refer to the documentation of the provider you're using to see what events are supported.
 
-<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event -->
+<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
 ### Providers:
 
