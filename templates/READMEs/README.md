@@ -29,24 +29,22 @@ Standardizing feature flags unifies tools and vendors behind a common interface 
 
 <!-- TODO: if this is a monorepo, link to the submodule README files here and include the requirements, installation, features, and usage there. Otherwise, exclude this section -->
 
-## 🔍 Requirements:
+## 🔍 Requirements
 
 <!-- TODO: required runtime, etc -->
 
-## 📦 Installation:
+## 📦 Installation
 
 <!-- TODO: installation instructions -->
 
-## 🌟 Features:
+## 🌟 Features
 
 - support for various backend [providers](https://openfeature.dev/docs/reference/concepts/provider)
 - easy integration and extension via [hooks](https://openfeature.dev/docs/reference/concepts/hooks)
 - bool, string, numeric, and object flag types
 - [context-aware](https://openfeature.dev/docs/reference/concepts/evaluation-context) evaluation
 
-## 🚀 Usage:
-
-### Basics:
+## 🚀 Usage
 
 <!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
 
@@ -54,7 +52,7 @@ You can also bind a provider to a specific client by name instead of setting tha
 
 <!-- TODO: example of named client binding -->
 
-### Context-aware evaluation:
+### Context-aware evaluation
 
 Sometimes the value of a flag must take into account some dynamic criteria about the application or user, such as the user location, IP, email address, or the location of the server.
 In OpenFeature, we refer to this as [`targeting`](https://openfeature.dev/specification/glossary#targeting).
@@ -71,27 +69,46 @@ Please refer to the documentation of the provider you're using to see what event
 
 <!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
-### Providers:
+### Hooks
 
-To develop a provider, you need to create a new project and include the OpenFeature SDK as a dependency. This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/java-sdk-contrib) available under the OpenFeature organization. Finally, you’ll then need to write the provider itself. This can be accomplished by implementing the `Provider` interface exported by the OpenFeature SDK.
-
-<!-- TODO: code example implementing a provider -->
-
-<!-- TODO: update with the technology in question -->
-See [here](https://openfeature.dev/ecosystem) for a catalog of available providers.
-
-### Hooks:
-
-A hook is a mechanism that allows for adding arbitrary behavior at well-defined points of the flag evaluation life-cycle. Use cases include validating the resolved flag value, modifying or adding data to the evaluation context, logging, telemetry, and tracking.
+A hook is a mechanism that allows for adding arbitrary behavior at well-defined points of the flag evaluation life-cycle.
+Use cases include validating the resolved flag value, modifying or adding data to the evaluation context, logging, telemetry, and tracking.
 
 <!-- TODO: code example of a hook -->
 
 <!-- TODO: update with the technology in question -->
 See [here](https://openfeature.dev/ecosystem) for a catalog of available hooks.
 
-### Logging:
+### Logging
 
 <!-- TODO: talk about logging config -->
+
+### Named clients
+
+Clients can be given a name.
+A name is a logical identifier which can be used to associate clients with a particular provider.
+If a name has no associated provider, clients with that name use the global provider.
+
+<!-- TODO: code example binding a named client to a provider -->
+
+### Providers:
+
+To develop a provider, you need to create a new project and include the OpenFeature SDK as a dependency.
+This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/java-sdk-contrib) available under the OpenFeature organization.
+Finally, you’ll then need to write the provider itself.
+This can be accomplished by implementing the `Provider` interface exported by the OpenFeature SDK.
+
+<!-- TODO: code example implementing a provider -->
+
+<!-- TODO: update with the technology in question -->
+See [here](https://openfeature.dev/ecosystem) for a catalog of available providers.
+
+### Shutdown
+
+The OpenFeature API provides a close function to perform a cleanup of all registered providers.
+This should only be called when your application is in the process of shutting down.
+
+<!-- TODO: code example for global shutdown -->
 
 ## ⭐️ Support the project
 
