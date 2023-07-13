@@ -69,7 +69,7 @@ Initialization events (`PROVIDER_READY` on success, `PROVIDER_ERROR` on failure)
 Some providers support additional events, such as `PROVIDER_CONFIGURATION_CHANGED`.
 Please refer to the documentation of the provider you're using to see what events are supported.
 
-<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and the API -->
+<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
 ### Providers:
 
