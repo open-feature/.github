@@ -1,107 +1,128 @@
-<!-- TODO: This is a template SDK README.md. It might also be useful for other repository types. Update the TODOs with correct examples/documentation. Replace all instances of "your-repo" with the appropriate name -->
-
 <!-- markdownlint-disable MD033 -->
+<!-- x-hide-in-docs-start -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/open-feature/community/0e23508c163a6a1ac8c0ced3e4bd78faafe627c7/assets/logo/horizontal/white/openfeature-horizontal-white.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/open-feature/community/0e23508c163a6a1ac8c0ced3e4bd78faafe627c7/assets/logo/horizontal/black/openfeature-horizontal-black.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/open-feature/community/0e23508c163a6a1ac8c0ced3e4bd78faafe627c7/assets/logo/horizontal/white/openfeature-horizontal-white.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/open-feature/community/0e23508c163a6a1ac8c0ced3e4bd78faafe627c7/assets/logo/horizontal/black/openfeature-horizontal-black.svg" />
     <img align="center" alt="OpenFeature Logo">
   </picture>
 </p>
 
-<!-- TODO: update title -->
-<h2 align="center">OpenFeature your-repo</h2>
+<h2 align="center">OpenFeature <!-- TODO: your language SDK --> SDK</h2>
 
-<!-- TODO: add relevant badges -->
-[![Specification](https://img.shields.io/static/v1?label=Specification&message=v0.6.0&color=yellow)](https://github.com/open-feature/spec/tree/v0.6.0)
+<!-- x-hide-in-docs-end -->
+<!-- The 'github-badges' class is used in the docs -->
+<p align="center" class="github-badges">
+  <a href="https://github.com/open-feature/spec/tree/v0.6.0">
+    <img alt="Specification" src="https://img.shields.io/static/v1?label=specification&message=v0.6.0&color=yellow&style=for-the-badge" />
+  </a>
+  <!-- x-release-please-start-version -->
 
-## 👋 Hey there! Thanks for checking out the OpenFeature your-repo
+<!-- TODO: update with your SDK repo
+  <a href="https://github.com/open-feature/my-sdk/releases/tag/v0.0.1">
+    <img alt="Release" src="https://img.shields.io/static/v1?label=release&message=v0.0.1&color=blue&style=for-the-badge" />
+  </a>  
+-->
 
-### What is OpenFeature?
+  <!-- x-release-please-end -->
+  <br/>
+  <a href="https://bestpractices.coreinfrastructure.org/projects/6601">
+    <img alt="CII Best Practices" src="https://bestpractices.coreinfrastructure.org/projects/6601/badge" />
+  </a>
+</p>
+<!-- x-hide-in-docs-start -->
 
-[OpenFeature][openfeature-website] is an open standard that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool.
+[OpenFeature](https://openfeature.dev) is an open standard that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool.
 
-### Why standardize feature flags?
+<!-- x-hide-in-docs-end -->
+## 🚀 Quick start
 
-Standardizing feature flags unifies tools and vendors behind a common interface which avoids vendor lock-in at the code level. Additionally, it offers a framework for building extensions and integrations and allows providers to focus on their unique value proposition.
-
-## 🔧 Components 
-
-<!-- TODO: if this is a monorepo, link to the submodule README files here and include the requirements, installation, features, and usage there. Otherwise, exclude this section -->
-
-## 🔍 Requirements
+### Requirements
 
 <!-- TODO: required runtime, etc -->
 
-## 📦 Installation
+### Install
 
 <!-- TODO: installation instructions -->
 
+### Usage
+
+<!-- TODO: basic usage instructions, setting the in-memory provider and getting a boolean flag called "v2_enabled" -->
+
+### API Reference
+
+<!-- TODO: link to formal API docs (ie: Javadoc) if available -->
+
 ## 🌟 Features
 
-- support for various backend [providers](https://openfeature.dev/docs/reference/concepts/provider)
-- easy integration and extension via [hooks](https://openfeature.dev/docs/reference/concepts/hooks)
-- bool, string, numeric, and object flag types
-- [context-aware](https://openfeature.dev/docs/reference/concepts/evaluation-context) evaluation
+<!-- TODO: update table to indicate implemented features (see legend below) -->
 
-## 🚀 Usage
+| Status | Features                        | Description                                                                                                                        |
+| ------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| ❌      | [Providers](#providers)         | Integrate with a commercial, open source, or in-house feature management tool.                                                     |
+| ❌      | [Targeting](#targeting)         | Contextually-aware flag evaluation using [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context). |
+| ❌      | [Hooks](#hooks)                 | Add functionality to various stages of the flag evaluation life-cycle.                                                             |
+| ❌      | [Logging](#logging)             | Integrate with popular logging packages.                                                                                           |
+| ❌      | [Named clients](#named-clients) | Utilize multiple providers in a single application.                                                                                |
+| ❌      | [Eventing](#eventing)           | React to state changes in the provider or flag management system.                                                                  |
+| ❌      | [Shutdown](#shutdown)           | Gracefully clean up a provider during application shutdown.                                                                        |
+| ❌      | [Extending](#extending)         | Extend OpenFeature with custom providers and hooks.                                                                                |
 
-<!-- TODO: code examples featuring setting a provider, getting a client, waiting for PROVIDER_READY, and doing an evaluation -->
+<sub>Implemented: ✅ | In-progress: ⚠️ | Not implemented yet: ❌</sub>
 
-You can also bind a provider to a specific client by name instead of setting that provider globally:
+### Providers
 
-<!-- TODO: example of named client binding -->
+[Providers](https://openfeature.dev/docs/reference/concepts/provider) are an abstraction between a flag management system and the OpenFeature SDK.
+Look [here](https://openfeature.dev/ecosystem?instant_search%5BrefinementList%5D%5Btype%5D%5B0%5D=Provider&instant_search%5BrefinementList%5D%5Btechnology%5D%5B0%5D=<!--TODO: your language-->) for a complete list of available providers.
+If the provider you're looking for hasn't been created yet, see the [develop a provider](#develop-a-provider) section to learn how to build it yourself.
 
-### Context-aware evaluation
+Once you've added a provider as a dependency, it can be registered with OpenFeature like this:
 
-Sometimes the value of a flag must take into account some dynamic criteria about the application or user, such as the user location, IP, email address, or the location of the server.
-In OpenFeature, we refer to this as [`targeting`](https://openfeature.dev/specification/glossary#targeting).
-If the flag system you're using supports targeting, you can provide the input data using the `EvaluationContext`.
+<!-- TODO: code example setting a provider, and setting it while awaiting init, if applicable -->
+
+In some situations, it may be beneficial to register multiple providers in the same application.
+This is possible using [named clients](#named-clients), which is covered in more details below.
+
+### Targeting
+
+Sometimes, the value of a flag must consider some dynamic criteria about the application or user, such as the user's location, IP, email address, or the server's location.
+In OpenFeature, we refer to this as [targeting](https://openfeature.dev/specification/glossary#targeting).
+If the flag management system you're using supports targeting, you can provide the input data using the [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context).
 
 <!-- TODO: code examples using context and different levels -->
 
-### Events
-
-Events allow you to react to state changes in the provider or underlying flag management system, such as flag definition changes, provider readiness, or error conditions.
-Initialization events (`PROVIDER_READY` on success, `PROVIDER_ERROR` on failure) are dispatched for every provider.
-Some providers support additional events, such as `PROVIDER_CONFIGURATION_CHANGED`.
-Please refer to the documentation of the provider you're using to see what events are supported.
-
-<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
 ### Hooks
 
-A hook is a mechanism that allows for adding arbitrary behavior at well-defined points of the flag evaluation life-cycle.
-Use cases include validating the resolved flag value, modifying or adding data to the evaluation context, logging, telemetry, and tracking.
+[Hooks](https://openfeature.dev/docs/reference/concepts/hooks) allow for custom logic to be added at well-defined points of the flag evaluation life-cycle
+Look [here](https://openfeature.dev/ecosystem/?instant_search%5BrefinementList%5D%5Btype%5D%5B0%5D=Hook&instant_search%5BrefinementList%5D%5Btechnology%5D%5B0%5D=<!--TODO: your language-->) for a complete list of available hooks.
+If the hook you're looking for hasn't been created yet, see the [develop a hook](#develop-a-hook) section to learn how to build it yourself.
 
-<!-- TODO: code example of a hook -->
+Once you've added a hook as a dependency, it can be registered at the global, client, or flag invocation level.
 
-<!-- TODO: update with the technology in question -->
-See [here](https://openfeature.dev/ecosystem) for a catalog of available hooks.
+<!-- TODO: code example of setting hooks at all levels -->
 
 ### Logging
 
-<!-- TODO: talk about logging config -->
+<!-- TODO: talk about logging config, and code example -->
 
 ### Named clients
 
 Clients can be given a name.
 A name is a logical identifier which can be used to associate clients with a particular provider.
-If a name has no associated provider, clients with that name use the global provider.
+If a name has no associated provider, the global provider is used.
 
 <!-- TODO: code example binding a named client to a provider -->
 
-### Providers:
+### Eventing
 
-To develop a provider, you need to create a new project and include the OpenFeature SDK as a dependency.
-This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/java-sdk-contrib) available under the OpenFeature organization.
-Finally, you’ll then need to write the provider itself.
-This can be accomplished by implementing the `Provider` interface exported by the OpenFeature SDK.
+Events allow you to react to state changes in the provider or underlying flag management system, such as flag definition changes, provider readiness, or error conditions.
+Initialization events (`PROVIDER_READY` on success, `PROVIDER_ERROR` on failure) are dispatched for every provider.
+Some providers support additional events, such as `PROVIDER_CONFIGURATION_CHANGED`.
 
-<!-- TODO: code example implementing a provider -->
+Please refer to the documentation of the provider you're using to see what events are supported.
 
-<!-- TODO: update with the technology in question -->
-See [here](https://openfeature.dev/ecosystem) for a catalog of available providers.
+<!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
 ### Shutdown
 
@@ -110,6 +131,31 @@ This should only be called when your application is in the process of shutting d
 
 <!-- TODO: code example for global shutdown -->
 
+## Extending
+
+### Develop a provider
+
+To develop a provider, you need to create a new project and include the OpenFeature SDK as a dependency.
+This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/<!--TODO: your language-->-sdk-contrib) available under the OpenFeature organization.
+You’ll then need to write the provider by implementing the `FeatureProvider` interface exported by the OpenFeature SDK.
+
+<!-- TODO: code example of provider implementation -->
+
+> Built a new provider? [Let us know](https://github.com/open-feature/openfeature.dev/issues/new?assignees=&labels=provider&projects=&template=document-provider.yaml&title=%5BProvider%5D%3A+) so we can add it to the docs!
+
+### Develop a hook
+
+To develop a hook, you need to create a new project and include the OpenFeature SDK as a dependency.
+This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/<!--TODO: your language-->-sdk-contrib) available under the OpenFeature organization.
+Implement your own hook by conforming to the `Hook interface`.
+To satisfy the interface, all methods (`Before`/`After`/`Finally`/`Error`) need to be defined.
+To avoid defining empty functions make use of the `UnimplementedHook` struct (which already implements all the empty functions).
+
+<!-- TODO: code example of hook implementation -->
+
+> Built a new hook? [Let us know](https://github.com/open-feature/openfeature.dev/issues/new?assignees=&labels=hook&projects=&template=document-hook.yaml&title=%5BHook%5D%3A+) so we can add it to the docs!
+
+<!-- x-hide-in-docs-start -->
 ## ⭐️ Support the project
 
 - Give this repo a ⭐️!
@@ -117,7 +163,7 @@ This should only be called when your application is in the process of shutting d
   - Twitter: [@openfeature](https://twitter.com/openfeature)
   - LinkedIn: [OpenFeature](https://www.linkedin.com/company/openfeature/)
 - Join us on [Slack](https://cloud-native.slack.com/archives/C0344AANLA1)
-- For more check out our [community page](https://openfeature.dev/community/)
+- For more, check out our [community page](https://openfeature.dev/community/)
 
 ## 🤝 Contributing
 
@@ -125,17 +171,12 @@ Interested in contributing? Great, we'd love your help! To get started, take a l
 
 ### Thanks to everyone that has already contributed
 
-<!-- TODO: update with correct repo -->
-<a href="https://github.com/open-feature/your-repo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-feature/your-repo" alt="Pictures of the folks who have contributed to the project" />
+<!-- TODO: replace with links to your SDK 
+<a href="https://github.com/open-feature/my-sdk/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=open-feature/my-sdk" alt="Pictures of the folks who have contributed to the project" />
 </a>
+-->
+
 
 Made with [contrib.rocks](https://contrib.rocks).
-
-## 📜 License
-
-[Apache License 2.0](LICENSE)
-
-<!-- TODO: add FOSSA widget -->
-
-[openfeature-website]: https://openfeature.dev
+<!-- x-hide-in-docs-end -->
