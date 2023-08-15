@@ -1,3 +1,8 @@
+<!-- TODO: This is a template SDK README.md.
+It's structured to fit nicely into openfeature.dev, which is configured to include SDK READMEs.
+Complete all the TODOs applicable for your implementation and then create an issue in https://github.com/open-feature/openfeature.dev
+-->
+
 <!-- markdownlint-disable MD033 -->
 <!-- x-hide-in-docs-start -->
 <p align="center">
