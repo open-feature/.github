@@ -18,12 +18,15 @@ Complete all the TODOs applicable for your implementation and then create an iss
 <!-- x-hide-in-docs-end -->
 <!-- The 'github-badges' class is used in the docs -->
 <p align="center" class="github-badges">
+<!-- TODO: update this with the version of the SDK your implementation supports -->
+
   <a href="https://github.com/open-feature/spec/tree/v0.6.0">
     <img alt="Specification" src="https://img.shields.io/static/v1?label=specification&message=v0.6.0&color=yellow&style=for-the-badge" />
   </a>
+  <!-- TODO: update the Release Please config to include the readme -->
   <!-- x-release-please-start-version -->
 
-<!-- TODO: update with your SDK repo
+<!-- TODO: update with your SDK repo and the latest release version
   <a href="https://github.com/open-feature/my-sdk/releases/tag/v0.0.1">
     <img alt="Release" src="https://img.shields.io/static/v1?label=release&message=v0.0.1&color=blue&style=for-the-badge" />
   </a>  
@@ -99,7 +102,7 @@ If the flag management system you're using supports targeting, you can provide t
 
 ### Hooks
 
-[Hooks](https://openfeature.dev/docs/reference/concepts/hooks) allow for custom logic to be added at well-defined points of the flag evaluation life-cycle
+[Hooks](https://openfeature.dev/docs/reference/concepts/hooks) allow for custom logic to be added at well-defined points of the flag evaluation life-cycle.
 Look [here](https://openfeature.dev/ecosystem/?instant_search%5BrefinementList%5D%5Btype%5D%5B0%5D=Hook&instant_search%5BrefinementList%5D%5Btechnology%5D%5B0%5D=<!--TODO: your language-->) for a complete list of available hooks.
 If the hook you're looking for hasn't been created yet, see the [develop a hook](#develop-a-hook) section to learn how to build it yourself.
 
