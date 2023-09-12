@@ -6,7 +6,7 @@
 [![Governance](https://img.shields.io/static/v1?label=Governance&message=bootstrap&color=yellow)](https://github.com/open-feature/community/blob/main/governance-charter.md)
 [![Contributing](https://img.shields.io/static/v1?label=Contributing&message=guide&color=blue)](https://github.com/open-feature/.github/blob/main/CONTRIBUTING.md)
 
-Our goal is to create an open standard for feature flag management to support a robust feature flag ecosystem using cloud native technologies.
+Our goal is to create an open specification for feature flag management to support a robust feature flag ecosystem using cloud native technologies.
 
 This means:
 
