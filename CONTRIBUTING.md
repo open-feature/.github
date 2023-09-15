@@ -18,22 +18,25 @@ Project governance is documented [here](https://github.com/open-feature/communit
 
 ## Repository requirements
 
-We recommend repositories in the project adhere to some security and maintenance guidelines. These are _only guidelines_, and may not be applicable or valuable in all instances. They are primarily inspired by recommendations from the [Cloud Native Security Controls Catalog](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/). Adherence to these guidelines may be required for 1.0 artifact releases, at the discretion of the [Technical Steering Committee](https://github.com/open-feature/community/blob/main/governance-charter.md#technical-steering-committee-tsc) and maintainers.
+We require repositories in the project adhere to some security and maintenance guidelines.
+They are primarily inspired by recommendations from the [Cloud Native Security Controls Catalog](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/).
+Adherence to these guidelines is required for 1.0 artifact releases, to the satisfaction of the [Technical Steering Committee](https://github.com/open-feature/community/blob/main/governance-charter.md#technical-steering-committee-tsc).
 
-| Requirement                     | Recommended solution(s)                                                                                                                   |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| artifact and image signing      | language-specific tools, [cosign][cosign]                                                                                                 |
-| automated publishing            | github actions (with permissions applying principle of least privilege), language-specific tools (Maven, nuget, NPM, etc)                 |
-| container, base image scanning  | [snyk][snyk], [trivy][trivy]                                                                                                              |
-| code ownership                  | branch protection rules\* and CODEOWNERS files                                                                                            |
-| dependency analysis             | [snyk][snyk]                                                                                                                              |
-| dependency auto-updates         | [Renovate][renovate]\*\*, [Dependabot][dependabot]                                                                                        |
-| fuzzing                         | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  |
-| SBOM generation                 | [CycloneDX][cyclonedx], [SPDX][spdx], [syft][syft]                                                                                        |
-| static analysis                 | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      |
-| unit, integration testing       | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] |
-| semantic versioning, changelogs | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          |
-| helpful readme file             | See [example README.md](./templates/READMEs/README.md)                                                                                    |
+| Requirement                                    | Recommended solution(s)                                                                                                                   | Notes                                                       |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| automated publishing                           | github actions (with permissions applying principle of least privilege), language-specific tools (Maven, nuget, NPM, etc)                 | required                                                    |
+| container, base image scanning                 | [snyk][snyk], [trivy][trivy]                                                                                                              | required                                                    |
+| code ownership                                 | branch protection rules\* and CODEOWNERS files                                                                                            | required                                                    |
+| dependency analysis                            | [snyk][snyk]                                                                                                                              | required                                                    |
+| dependency auto-updates                        | [Renovate][renovate]\*\*, [Dependabot][dependabot]                                                                                        | required                                                    |
+| semantic versioning, changelogs                | [Semantic Versioning][semantic-versioning], [Conventional Commits][conventional-commits], [Release Please][release-please]\*\*\*          | required                                                    |
+| unit, integration testing                      | github actions (with permissions applying principle of least privilege), language-specific tools (JUnit, Jest, etc), [Cucumber][cucumber] | required, with coverage metrics up to maintainer discretion |
+| signing (binaries, packages, container images) | language-specific tools, [cosign][cosign]                                                                                                 | recommended, where supported                                |
+| fuzzing                                        | [ClusterFuzzLite][clusterfuzzlite], [OSS-Fuzz][oss-fuzz]                                                                                  | recommended                                                 |
+| helpful readme file                            | See [example README.md](./templates/READMEs/README.md)                                                                                    | recommended                                                 |
+| provenance                                     | [SLSA](https://slsa.dev/spec/v1.0/provenance#provenance)                                                                                  | recommended                                                 |
+| SBOM generation                                | [CycloneDX][cyclonedx], [SPDX][spdx], [syft][syft]                                                                                        | recommended                                                 |
+| static analysis                                | [SonarCloud][sonarcloud], language-specific tools (SpotBugs, eslint)                                                                      | recommended                                                 |
 
 ## Developer Certificate Of Origin
 
