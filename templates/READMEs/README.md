@@ -85,10 +85,10 @@ If the provider you're looking for hasn't been created yet, see the [develop a p
 
 Once you've added a provider as a dependency, it can be registered with OpenFeature like this:
 
-<!-- TODO: code example setting a provider, and setting it while awaiting init, if applicable -->
+<!-- TODO: code example setting a provider and setting it while awaiting init, if applicable -->
 
 In some situations, it may be beneficial to register multiple providers in the same application.
-This is possible using [named clients](#named-clients), which is covered in more details below.
+This is possible using [named clients](#named-clients), which is covered in more detail below.
 
 ### Targeting
 
@@ -111,12 +111,12 @@ Once you've added a hook as a dependency, it can be registered at the global, cl
 
 ### Logging
 
-<!-- TODO: talk about logging config, and code example -->
+<!-- TODO: talk about logging config and code example -->
 
 ### Named clients
 
 Clients can be given a name.
-A name is a logical identifier which can be used to associate clients with a particular provider.
+A name is a logical identifier that can be used to associate clients with a particular provider.
 If a name has no associated provider, the global provider is used.
 
 <!-- TODO: code example binding a named client to a provider -->
@@ -156,7 +156,7 @@ To develop a hook, you need to create a new project and include the OpenFeature 
 This can be a new repository or included in [the existing contrib repository](https://github.com/open-feature/<!--TODO: your language-->-sdk-contrib) available under the OpenFeature organization.
 Implement your own hook by conforming to the `Hook interface`.
 To satisfy the interface, all methods (`Before`/`After`/`Finally`/`Error`) need to be defined.
-To avoid defining empty functions make use of the `UnimplementedHook` struct (which already implements all the empty functions).
+To avoid defining empty functions, make use of the `UnimplementedHook` struct (which already implements all the empty functions).
 
 <!-- TODO: code example of hook implementation -->
 
@@ -176,7 +176,7 @@ To avoid defining empty functions make use of the `UnimplementedHook` struct (wh
 
 Interested in contributing? Great, we'd love your help! To get started, take a look at the [CONTRIBUTING](CONTRIBUTING.md) guide.
 
-### Thanks to everyone that has already contributed
+### Thanks to everyone who has already contributed
 
 <!-- TODO: replace with links to your SDK 
 <a href="https://github.com/open-feature/my-sdk/graphs/contributors">
