@@ -19,8 +19,8 @@ Complete all the TODOs applicable for your implementation and then create an iss
 <p align="center" class="github-badges">
 <!-- TODO: update this with the version of the SDK your implementation supports -->
 
-  <a href="https://github.com/open-feature/spec/tree/v0.6.0">
-    <img alt="Specification" src="https://img.shields.io/static/v1?label=specification&message=v0.6.0&color=yellow&style=for-the-badge" />
+  <a href="https://github.com/open-feature/spec/releases/tag/v0.7.0">
+    <img alt="Specification" src="https://img.shields.io/static/v1?label=specification&message=v0.7.0&color=yellow&style=for-the-badge" />
   </a>
   <!-- TODO: update the Release Please config to include the readme -->
   <!-- x-release-please-start-version -->
@@ -39,7 +39,7 @@ Complete all the TODOs applicable for your implementation and then create an iss
 </p>
 <!-- x-hide-in-docs-start -->
 
-[OpenFeature](https://openfeature.dev) is an open standard that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool.
+[OpenFeature](https://openfeature.dev) is an open specification that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool.
 
 <!-- x-hide-in-docs-end -->
 ## 🚀 Quick start
