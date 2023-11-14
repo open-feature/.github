@@ -13,9 +13,9 @@ We hold regular meetings which you can see [here](https://github.com/open-featur
 We are also present on the `#openfeature` channel in the [CNCF slack](https://slack.cncf.io/).
 
 ## Contributor ladder
-Are you interested in contributing on a regular basis?
-Check out our [contributor ladder](https://github.com/open-feature/community/blob/main/CONTRIBUTOR_LADDER.md)
 
+Are you interested in contributing on a regular basis?
+Check out our [contributor ladder](https://openfeature.dev/community/CONTRIBUTOR_LADDER).
 
 ## Project governance
 
