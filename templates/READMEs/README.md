@@ -39,7 +39,7 @@ Complete all the TODOs applicable for your implementation and then create an iss
 </p>
 <!-- x-hide-in-docs-start -->
 
-[OpenFeature](https://openfeature.dev) is an open specification that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool.
+[OpenFeature](https://openfeature.dev) is an open specification that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool or in-house solution.
 
 <!-- x-hide-in-docs-end -->
 ## 🚀 Quick start
