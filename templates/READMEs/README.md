@@ -64,16 +64,17 @@ Complete all the TODOs applicable for your implementation and then create an iss
 
 <!-- TODO: update table to indicate implemented features (see legend below) -->
 
-| Status | Features                        | Description                                                                                                                        |
-| ------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| ❌      | [Providers](#providers)         | Integrate with a commercial, open source, or in-house feature management tool.                                                     |
-| ❌      | [Targeting](#targeting)         | Contextually-aware flag evaluation using [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context). |
-| ❌      | [Hooks](#hooks)                 | Add functionality to various stages of the flag evaluation life-cycle.                                                             |
-| ❌      | [Logging](#logging)             | Integrate with popular logging packages.                                                                                           |
-| ❌      | [Named clients](#named-clients) | Utilize multiple providers in a single application.                                                                                |
-| ❌      | [Eventing](#eventing)           | React to state changes in the provider or flag management system.                                                                  |
-| ❌      | [Shutdown](#shutdown)           | Gracefully clean up a provider during application shutdown.                                                                        |
-| ❌      | [Extending](#extending)         | Extend OpenFeature with custom providers and hooks.                                                                                |
+| Status | Features                                                            | Description                                                                                                                                                  |
+| ------ | --------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ❌      | [Providers](#providers)                                             | Integrate with a commercial, open source, or in-house feature management tool.                                                                               |
+| ❌      | [Targeting](#targeting)                                             | Contextually-aware flag evaluation using [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context).                           |
+| ❌      | [Hooks](#hooks)                                                     | Add functionality to various stages of the flag evaluation life-cycle.                                                                                       |
+| ❌      | [Logging](#logging)                                                 | Integrate with popular logging packages.                                                                                                                     |  
+| ❌      | [Domains](#domains)                                                 | Logically bind clients with providers.                                                                                                                       |
+| ❌      | [Eventing](#eventing)                                               | React to state changes in the provider or flag management system.                                                                                            |
+| ❌      | [Shutdown](#shutdown)                                               | Gracefully clean up a provider during application shutdown.                                                                                                  |
+| ❌      | [Transaction Context Propagation](#transaction-context-propagation) | Set a specific [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context) for a transaction (e.g. an HTTP request or a thread) |
+| ❌      | [Extending](#extending)                                             | Extend OpenFeature with custom providers and hooks.                                                                                                          |
 
 <sub>Implemented: ✅ | In-progress: ⚠️ | Not implemented yet: ❌</sub>
 
@@ -113,11 +114,10 @@ Once you've added a hook as a dependency, it can be registered at the global, cl
 
 <!-- TODO: talk about logging config and include a code example -->
 
-### Named clients
+### Domains
 
-Clients can be given a name.
-A name is a logical identifier that can be used to associate clients with a particular provider.
-If a name has no associated provider, the global provider is used.
+Clients can be assigned to a domain. A domain is a logical identifier which can be used to associate clients with a particular provider. 
+If a domain has no associated provider, the default provider is used.
 
 <!-- TODO: code example binding a named client to a provider -->
 
@@ -135,6 +135,13 @@ Please refer to the documentation of the provider you're using to see what event
 
 The OpenFeature API provides a close function to perform a cleanup of all registered providers.
 This should only be called when your application is in the process of shutting down.
+
+<!-- TODO: code example for global shutdown -->
+
+### Transaction Context Propagation
+
+Transaction context is a container for transaction-specific evaluation context (e.g. user id, user agent, IP).
+Transaction context can be set where specific data is available (e.g. an auth service or request handler) and by using the transaction context propagator it will automatically be applied to all flag evaluations within a transaction (e.g. a request or thread).
 
 <!-- TODO: code example for global shutdown -->
 
