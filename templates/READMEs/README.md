@@ -89,7 +89,7 @@ Once you've added a provider as a dependency, it can be registered with OpenFeat
 <!-- TODO: code example setting a provider and setting it while awaiting init, if applicable -->
 
 In some situations, it may be beneficial to register multiple providers in the same application.
-This is possible using [named clients](#named-clients), which is covered in more detail below.
+This is possible using [domains](#domains), which is covered in more detail below.
 
 ### Targeting
 
