@@ -140,6 +140,8 @@ For example, a flag enhancing the appearance of a UI component might drive user 
 
 <!-- TODO: code example for tracking -->
 
+Note that some providers may not support tracking; check the documentation for your provider for more information.
+
 ### Transaction Context Propagation
 
 Transaction context is a container for transaction-specific evaluation context (e.g. user id, user agent, IP).
