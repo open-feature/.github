@@ -65,15 +65,16 @@ Complete all the TODOs applicable for your implementation and then create an iss
 <!-- TODO: update table to indicate implemented features (see legend below) -->
 
 | Status | Features                                                            | Description                                                                                                                                                  |
-| ------ | --------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ❌      | [Providers](#providers)                                             | Integrate with a commercial, open source, or in-house feature management tool.                                                                               |
 | ❌      | [Targeting](#targeting)                                             | Contextually-aware flag evaluation using [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context).                           |
 | ❌      | [Hooks](#hooks)                                                     | Add functionality to various stages of the flag evaluation life-cycle.                                                                                       |
-| ❌      | [Logging](#logging)                                                 | Integrate with popular logging packages.                                                                                                                     |  
+| ❌      | [Logging](#logging)                                                 | Integrate with popular logging packages.                                                                                                                     |
 | ❌      | [Domains](#domains)                                                 | Logically bind clients with providers.                                                                                                                       |
 | ❌      | [Eventing](#eventing)                                               | React to state changes in the provider or flag management system.                                                                                            |
-| ❌      | [Shutdown](#shutdown)                                               | Gracefully clean up a provider during application shutdown.                                                                                                  |
+| ❌      | [Tracking](#tracking)                                               | Associate user-actions with flag evaluations for the purposes of experimentation.                                                                            |
 | ❌      | [Transaction Context Propagation](#transaction-context-propagation) | Set a specific [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context) for a transaction (e.g. an HTTP request or a thread) |
+| ❌      | [Shutdown](#shutdown)                                               | Gracefully clean up a provider during application shutdown.                                                                                                  |
 | ❌      | [Extending](#extending)                                             | Extend OpenFeature with custom providers and hooks.                                                                                                          |
 
 <sub>Implemented: ✅ | In-progress: ⚠️ | Not implemented yet: ❌</sub>
@@ -131,17 +132,27 @@ Please refer to the documentation of the provider you're using to see what event
 
 <!-- TODO: code example of a PROVIDER_CONFIGURATION_CHANGED event for the client and a PROVIDER_STALE event for the API -->
 
-### Shutdown
+### Tracking
 
-The OpenFeature API provides a close function to perform a cleanup of all registered providers.
-This should only be called when your application is in the process of shutting down.
+The tracking API allows you to use OpenFeature abstractions and objects to associate user actions with feature flag evaluations.
+This is essential for robust experimentation powered by feature flags.
+For example, a flag enhancing the appearance of a UI component might drive user engagement to a new feature; to test this hypothesis, telemetry collected by a [hook](#hooks) or [provider](#providers) can be associated with telemetry reported in the client's `track` function.
 
-<!-- TODO: code example for global shutdown -->
+<!-- TODO: code example for tracking -->
+
+Note that some providers may not support tracking; check the documentation for your provider for more information.
 
 ### Transaction Context Propagation
 
 Transaction context is a container for transaction-specific evaluation context (e.g. user id, user agent, IP).
 Transaction context can be set where specific data is available (e.g. an auth service or request handler) and by using the transaction context propagator it will automatically be applied to all flag evaluations within a transaction (e.g. a request or thread).
+
+<!-- TODO: code example for transaction context propagation -->
+
+### Shutdown
+
+The OpenFeature API provides a close function to perform a cleanup of all registered providers.
+This should only be called when your application is in the process of shutting down.
 
 <!-- TODO: code example for global shutdown -->
 
