@@ -2,7 +2,7 @@ name: Federated SDK issue management
 
 on:
   issues:
-    types: [edited, closed, labeled, unlabeled]
+    types: [opened, edited, closed]
 
 jobs:
   demo:
