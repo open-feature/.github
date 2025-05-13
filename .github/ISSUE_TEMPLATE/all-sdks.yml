@@ -17,8 +17,7 @@ body:
   - type: textarea
     attributes:
       label: Parent issue description
-      description: The description of the parent issue.
-      value: |
+      description: |
         Please add information about the issue you want to create.
         You can use Markdown syntax to format your text.
   - type: markdown
