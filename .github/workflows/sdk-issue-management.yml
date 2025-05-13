@@ -1,0 +1,28 @@
+name: Federated SDK issue management
+
+on:
+  issues:
+    types: [edited, closed, labeled, unlabeled]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    environment: issue-management
+    if: contains(github.event.issue.labels.*.name, 'federated') && contains(github.event.issue.labels.*.name, 'sdk')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Parse issue form
+        uses: stefanbuck/github-issue-parser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/all-sdks.yaml
+
+      - name: Manage parent and sub-issues
+        uses: beeme1mr/federated-issue-action@v1
+        with:
+          github-token: ${{ secrets.ISSUE_MANAGEMENT_PAT }}
+          config-path: .github/sdk-issue-config.json
+          child-issue-title: ${{ steps.issue-parser.outputs.issueparser_sub-issue-title }}
+          child-issue-body: ${{ steps.issue-parser.outputs.issueparser_sub-issue-body }}

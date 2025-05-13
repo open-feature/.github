@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/beeme1mr/federated-issue-action/refs/tags/v1/config.schema.json",
+  "allowed": {
+    "teams": [
+      "technical-steering-committee",
+      "governance-board"
+    ]
+  },
+  "targetRepositorySelectors": [
+    {
+      "method": "name-pattern",
+      "pattern": "-sdk",
+      "operator": "ends-with"
+    }
+  ]
+}
