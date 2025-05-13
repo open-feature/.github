@@ -7,6 +7,7 @@ on:
 jobs:
   demo:
     runs-on: ubuntu-latest
+    environment: issue-management
     if: contains(github.event.issue.labels.*.name, 'federated') && contains(github.event.issue.labels.*.name, 'sdk')
     steps:
       - name: Checkout repository
