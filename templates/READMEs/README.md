@@ -71,13 +71,14 @@ Complete all the TODOs applicable for your implementation and then create an iss
 | ❌      | [Hooks](#hooks)                                                     | Add functionality to various stages of the flag evaluation life-cycle.                                                                                       |
 | ❌      | [Logging](#logging)                                                 | Integrate with popular logging packages.                                                                                                                     |
 | ❌      | [Domains](#domains)                                                 | Logically bind clients with providers.                                                                                                                       |
+| ❌     | [Multi-Provider](#multi-provider)                                   | Use multiple feature flag providers simultaneously with configurable evaluation strategies.                                                                   |
 | ❌      | [Eventing](#eventing)                                               | React to state changes in the provider or flag management system.                                                                                            |
 | ❌      | [Tracking](#tracking)                                               | Associate user-actions with flag evaluations for the purposes of experimentation.                                                                            |
 | ❌      | [Transaction Context Propagation](#transaction-context-propagation) | Set a specific [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context) for a transaction (e.g. an HTTP request or a thread) |
 | ❌      | [Shutdown](#shutdown)                                               | Gracefully clean up a provider during application shutdown.                                                                                                  |
 | ❌      | [Extending](#extending)                                             | Extend OpenFeature with custom providers and hooks.                                                                                                          |
 
-<sub>Implemented: ✅ | In-progress: ⚠️ | Not implemented yet: ❌</sub>
+<sub>Implemented: ✅ | In-progress: ⚠️ | Not implemented yet: ❌ | Experimental: 🔬</sub>
 
 ### Providers
 
@@ -121,6 +122,43 @@ Clients can be assigned to a domain. A domain is a logical identifier which can 
 If a domain has no associated provider, the default provider is used.
 
 <!-- TODO: code example binding a named client to a provider -->
+
+### Multi-Provider
+
+The Multi-Provider enables the use of multiple underlying feature flag providers simultaneously, allowing different providers to be used for different flag keys or based on specific evaluation strategies.
+
+#### Basic Usage
+
+<!-- TODO: code example  -->
+
+#### Evaluation Strategies
+
+The Multi-Provider supports different evaluation strategies that determine how multiple providers are used:
+
+##### FirstMatchStrategy (Default)
+
+Evaluates providers sequentially and returns the first result that is not "flag not found". If any provider returns an error, that error is returned immediately.
+
+<!-- TODO: code example  -->
+
+##### FirstSuccessfulStrategy
+
+Evaluates providers sequentially and returns the first successful result, ignoring errors. Only if all providers fail will errors be returned.
+
+<!-- TODO: code example  -->
+
+##### ComparisonStrategy
+
+Evaluates all providers in parallel and compares results. If values agree, returns the agreed value. If they disagree, returns the fallback provider's value (or first provider if no fallback is specified) and optionally calls a mismatch callback.
+
+<!-- TODO: code example  -->
+
+#### Evaluation Modes
+
+The Multi-Provider supports two evaluation modes:
+
+-   **Sequential**: Providers are evaluated one after another (used by `FirstMatchStrategy` and `FirstSuccessfulStrategy`)
+-   **Parallel**: All providers are evaluated simultaneously (used by `ComparisonStrategy`)
 
 ### Eventing
 
