@@ -157,8 +157,8 @@ Evaluates all providers in parallel and compares results. If values agree, retur
 
 The Multi-Provider supports two evaluation modes:
 
--   **Sequential**: Providers are evaluated one after another (used by `FirstMatchStrategy` and `FirstSuccessfulStrategy`)
--   **Parallel**: All providers are evaluated simultaneously (used by `ComparisonStrategy`)
+- **Sequential**: Providers are evaluated one after another (used by `FirstMatchStrategy` and `FirstSuccessfulStrategy`)
+- **Parallel**: All providers are evaluated simultaneously (used by `ComparisonStrategy`)
 
 ### Eventing
 
